@@ -1,0 +1,63 @@
+hila953, omer_siton
+Hila Frumer (318933405), Omer Siton (316123819)
+
+EX: 2
+
+FILES:
+uthreads.cpp -- uthreads library source code
+Makefile -- makefile
+README -- this file
+
+REMARKS:
+---------
+
+ANSWERS:
+
+Q1:
+There are many uses for user-level threads, this is mainly for an 
+application that switches between threads often, one of the examples 
+we discussed in class is - Merge-sort.
+The merge-sort can be implemented in the following way-
+In each merge-sort merge operation, we will create a new user-level thread. 
+This is possible because each merger operation works independently. 
+The choice to use this implementation in user-level thread is efficient and 
+appropriate, becuse the context switch between user level threads have low 
+overhead, this is due to the kernel not participating.
+
+Q2:
+Adventage of creating the new process-
+* Each tab is protected from other tabs, they can not access its data, 
+so the tab allows us to safely browse sites that contain private information.
+* independent if one tab blocked or terminated, this does not affect the others.
+
+Disadventage of creating the new process-
+* High overhead when switching from new tab to another.
+
+Q3:
+Interrupts and signals-
+a. PID – 13677
+c. we open a shell and type “Kill pid”.  when pressing the keyboard, 
+we send signal to operating system. After this, the shell calls the 
+"kill" OS function. when the  "kill" function executed, happens interrupt and 
+the operating system sends a signal  to the process that the process need to
+kill itself.
+
+Q4:
+The difference between ‘real’ and ‘virtual’ time-
+virtual time is the time the process runs. For example, We started a process
+ at 10:00 and it ends at 10:10, and he can sleep at 10:04 to 10:05, so the 
+running time of the process is 9 minutes and not 10.
+Real time is the real time that has passed in the system. For example,  
+If the time now is 10:00 and we count the time until 12:00, then two hours 
+have passed.
+
+
+Q5:
+Sigsetjmp – 
+saves the stack context – SP ,PC and CPU state in a struct (env buffer) for 
+later use. If savesigs is non-zero it also saves the current signal mask. 
+
+Siglongjmp -  
+Jumps to the code location and restore CPU state specified by env 
+(the strurct) and also restore the signal mask if was specified. The jump 
+will take us to the location in the code where sigsetjmp has been called.
