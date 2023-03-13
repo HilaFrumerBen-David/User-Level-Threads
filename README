@@ -1,5 +1,6 @@
-hila953, omer_siton
-Hila Frumer (318933405), Omer Siton (316123819)
+In this project i created a static library, that creates and manages user-level threads.
+A potential user will be able to include my library and use it according to the its public interface: the uthreads.h header file.
+
 
 EX: 2
 
